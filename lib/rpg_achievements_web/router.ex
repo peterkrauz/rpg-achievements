@@ -10,5 +10,6 @@ defmodule RpgAchievementsWeb.Router do
 
     resources "/rpgs", RpgController, except: [:new, :edit]
     resources "/players", PlayerController, except: [:new, :edit]
+    resources "/achievements", AchievementController, except: [:new, :edit]
   end
 end

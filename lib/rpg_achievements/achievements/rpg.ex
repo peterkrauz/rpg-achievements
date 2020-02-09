@@ -6,6 +6,7 @@ defmodule RpgAchievements.Achievements.Rpg do
     field :created_at, :date
     field :description, :string
     field :name, :string
+    has_many :achievements, RpgAchievements.Achievements.Achievement
 
     timestamps()
   end
