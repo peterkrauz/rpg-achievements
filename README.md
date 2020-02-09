@@ -10,6 +10,7 @@ Eventually, came the idea of doing an app that reads all achievements, but i was
 ## How to run it
 
 *Be sure to have Elixir and Phoenix installed.*
+
 Clone the repo, enter the directory, type `mix deps.get` to fetch dependencies. 
 Then, create and migrate your database by running `mix ecto.create && mix ecto.migrate`.
 After that, run `mix phx.server` to execute the application. The result can be found on `localhost:4000`.
