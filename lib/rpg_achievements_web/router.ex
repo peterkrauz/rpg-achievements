@@ -8,8 +8,8 @@ defmodule RpgAchievementsWeb.Router do
   scope "/api", RpgAchievementsWeb do
     pipe_through :api
 
-    resources "/rpgs", RpgController, except: [:new, :edit]
-    resources "/players", PlayerController, except: [:new, :edit]
-    resources "/achievements", AchievementController, except: [:new, :edit]
+    resources "/rpgs", RpgController, except: [:create, :update, :detele, :new, :edit]
+    resources "/players", PlayerController, except: [:create, :update, :detele, :new, :edit]
+    resources "/achievements", AchievementController, except: [:create, :update, :detele, :new, :edit]
   end
 end
