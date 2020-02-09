@@ -7,5 +7,7 @@ defmodule RpgAchievementsWeb.Router do
 
   scope "/api", RpgAchievementsWeb do
     pipe_through :api
+
+    resources "/rpgs", RpgController, except: [:new, :edit]
   end
 end
