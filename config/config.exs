@@ -14,8 +14,7 @@ config :rpg_achievements, RpgAchievementsWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "WKRv8J6eeUrtIhdRBG+j6H2IusJwDjuba5oE9uGTLfgGt60aIPm6030f+uXHoHHL",
   render_errors: [view: RpgAchievementsWeb.ErrorView, accepts: ~w(json)],
-  pubsub: [name: RpgAchievements.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+  pubsub_server: RpgAchievements.PubSub
 
 # Configures Elixir's Logger
 config :logger, :console,

@@ -2,6 +2,7 @@ defmodule RpgAchievements.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
+  {Phoenix.PubSub, [name: RpgAchievements.PubSub, adapter: Phoenix.PubSub.PG2]}
 
   use Application
 
