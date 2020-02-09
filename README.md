@@ -1,20 +1,7 @@
-# RpgAchievements
+# Rpg Achievements 
 
-To start your Phoenix server:
+This is a toy project that serves as a REST api for an Android App to talk to. Having lack of a better and quicker alternative, i decided to give [Phoenix](https://www.phoenixframework.org/) a try. Marvelous tools and documentation regarding [Ecto](https://hexdocs.pm/ecto/Ecto.html) and Phoenix made this project possible for an Android Developer to develop. This whole thing was made in about three hours, from scratch.
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
+## How to run it
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+Clone the repo, enter the directory, type `mix deps.get` to fetch dependencies. After that, run `mix phx.server` to execute the application. The result can be found on `localhost:4000`.
