@@ -101,4 +101,100 @@ defmodule RpgAchievements.Achievement do
   def change_player(%Player{} = player) do
     Player.changeset(player, %{})
   end
+
+  alias RpgAchievements.Achievement.AchievementCompletion
+
+  @doc """
+  Returns the list of completed_achievements.
+
+  ## Examples
+
+      iex> list_completed_achievements()
+      [%AchievementCompletion{}, ...]
+
+  """
+  def list_completed_achievements do
+    Repo.all(AchievementCompletion)
+  end
+
+  @doc """
+  Gets a single achievement_completion.
+
+  Raises `Ecto.NoResultsError` if the Achievement completion does not exist.
+
+  ## Examples
+
+      iex> get_achievement_completion!(123)
+      %AchievementCompletion{}
+
+      iex> get_achievement_completion!(456)
+      ** (Ecto.NoResultsError)
+
+  """
+  def get_achievement_completion!(id), do: Repo.get!(AchievementCompletion, id)
+
+  @doc """
+  Creates a achievement_completion.
+
+  ## Examples
+
+      iex> create_achievement_completion(%{field: value})
+      {:ok, %AchievementCompletion{}}
+
+      iex> create_achievement_completion(%{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def create_achievement_completion(attrs \\ %{}) do
+    %AchievementCompletion{}
+    |> AchievementCompletion.changeset(attrs)
+    |> Repo.insert()
+  end
+
+  @doc """
+  Updates a achievement_completion.
+
+  ## Examples
+
+      iex> update_achievement_completion(achievement_completion, %{field: new_value})
+      {:ok, %AchievementCompletion{}}
+
+      iex> update_achievement_completion(achievement_completion, %{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def update_achievement_completion(%AchievementCompletion{} = achievement_completion, attrs) do
+    achievement_completion
+    |> AchievementCompletion.changeset(attrs)
+    |> Repo.update()
+  end
+
+  @doc """
+  Deletes a achievement_completion.
+
+  ## Examples
+
+      iex> delete_achievement_completion(achievement_completion)
+      {:ok, %AchievementCompletion{}}
+
+      iex> delete_achievement_completion(achievement_completion)
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def delete_achievement_completion(%AchievementCompletion{} = achievement_completion) do
+    Repo.delete(achievement_completion)
+  end
+
+  @doc """
+  Returns an `%Ecto.Changeset{}` for tracking achievement_completion changes.
+
+  ## Examples
+
+      iex> change_achievement_completion(achievement_completion)
+      %Ecto.Changeset{data: %AchievementCompletion{}}
+
+  """
+  def change_achievement_completion(%AchievementCompletion{} = achievement_completion) do
+    AchievementCompletion.changeset(achievement_completion, %{})
+  end
 end

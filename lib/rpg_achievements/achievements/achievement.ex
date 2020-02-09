@@ -7,6 +7,7 @@ defmodule RpgAchievements.Achievements.Achievement do
     field :description, :string
     belongs_to :rpg, RpgAchievements.Achievements.Rpg
 
+    many_to_many :players, RpgAchievements.Achievement.Player, join_through: "completed_achievements"
     timestamps()
   end
 

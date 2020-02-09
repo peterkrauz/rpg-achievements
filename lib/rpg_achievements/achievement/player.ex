@@ -5,6 +5,7 @@ defmodule RpgAchievements.Achievement.Player do
   schema "players" do
     field :name, :string
 
+    many_to_many :achievements, RpgAchievements.Achievements.Achievement, join_through: "completed_achievements"
     timestamps()
   end
 
