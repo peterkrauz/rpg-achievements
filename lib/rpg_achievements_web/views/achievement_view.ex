@@ -3,11 +3,11 @@ defmodule RpgAchievementsWeb.AchievementView do
   alias RpgAchievementsWeb.AchievementView
 
   def render("index.json", %{achievements: achievements}) do
-    %{data: render_many(achievements, AchievementView, "achievement.json")}
+    render_many(achievements, AchievementView, "achievement.json")
   end
 
   def render("show.json", %{achievement: achievement}) do
-    %{data: render_one(achievement, AchievementView, "achievement.json")}
+    render_one(achievement, AchievementView, "achievement.json")
   end
 
   def render("achievement.json", %{achievement: achievement}) do

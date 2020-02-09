@@ -3,11 +3,11 @@ defmodule RpgAchievementsWeb.RpgView do
   alias RpgAchievementsWeb.RpgView
 
   def render("index.json", %{rpgs: rpgs}) do
-    %{data: render_many(rpgs, RpgView, "rpg.json")}
+    render_many(rpgs, RpgView, "rpg.json")
   end
 
   def render("show.json", %{rpg: rpg}) do
-    %{data: render_one(rpg, RpgView, "rpg.json")}
+    render_one(rpg, RpgView, "rpg.json")
   end
 
   def render("rpg.json", %{rpg: rpg}) do
