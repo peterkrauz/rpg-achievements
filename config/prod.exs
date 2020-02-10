@@ -11,7 +11,9 @@ use Mix.Config
 # before starting your production server.
 config :rpg_achievements, RpgAchievementsWeb.Endpoint,
   http: [:inet6, port: System.get_env("PORT") || 4000],
-  url: [host: "example.com", port: 80],
+  http: [port: {:system, "PORT"}],
+  url: [scheme: "https", host: "rpg-achievements.herokuapp.com/", port: 443],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],  
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
