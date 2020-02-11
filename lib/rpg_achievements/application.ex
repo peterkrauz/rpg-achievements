@@ -9,10 +9,10 @@ defmodule RpgAchievements.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-      # Start the Ecto repository
-      RpgAchievements.Repo,
       # Start the endpoint when the application starts
       RpgAchievementsWeb.Endpoint,
+      # Start the Ecto repository
+      RpgAchievements.Repo,
       # Starts a worker by calling: RpgAchievements.Worker.start_link(arg)
       # {RpgAchievements.Worker, arg},
     ]
